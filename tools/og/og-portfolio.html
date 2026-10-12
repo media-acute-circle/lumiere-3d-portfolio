@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OG · Lumière portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Manrope:wght@400..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body { position: relative; background: #0E0E10; color: #EDEAE3; font-family: Manrope, sans-serif; }
+  .glow { position: absolute; right: -80px; top: -40px; width: 760px; height: 760px; border-radius: 50%; background: radial-gradient(closest-side, rgba(255,190,102,.32), rgba(255,190,102,.06) 55%, transparent 75%); }
+  .pendant { position: absolute; right: 10px; top: 0; width: 600px; height: 630px; object-fit: cover; object-position: center 30%;
+    -webkit-mask-image: radial-gradient(70% 75% at 50% 45%, #000 55%, transparent 100%); }
+  .copy { position: absolute; left: 72px; top: 64px; bottom: 56px; width: 600px; display: flex; flex-direction: column; }
+  .brand { font-family: 'Bodoni Moda', serif; font-size: 30px; letter-spacing: .01em; }
+  .brand sup { color: #D9C7A3; font-size: 18px; }
+  .kicker { margin-top: 56px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: .1em; text-transform: uppercase; color: #A3A097; }
+  .kicker b { color: #D9C7A3; font-weight: 500; }
+  h1 { margin-top: 16px; font-family: 'Bodoni Moda', serif; font-weight: 500; font-size: 62px; line-height: 1.04; letter-spacing: -.02em; }
+  h1 em { color: #D9C7A3; }
+  .pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; max-width: 560px; }
+  .pill { padding: 9px 16px; border: 1px solid rgba(255,255,255,.16); border-radius: 2px; font-size: 15px; font-weight: 600; letter-spacing: .02em; color: #EDEAE3; background: rgba(255,255,255,.03); }
+  .pill.on { background: #D9C7A3; color: #0E0E10; border-color: #D9C7A3; }
+  .by { margin-top: auto; display: flex; align-items: center; gap: 14px; font-size: 16px; color: #A3A097; }
+  .by img { width: 44px; height: 44px; }
+  .by b { color: #EDEAE3; font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <img class="pendant" src="pendant.png" alt="">
+  <div class="copy">
+    <div class="brand">Lumière<sup>*</sup></div>
+    <p class="kicker"><b>3D portfolio</b> · Premium lighting</p>
+    <h1>Light that reads beautifully from <em>every angle.</em></h1>
+    <div class="pills">
+      <span class="pill on">WebGL 3D</span><span class="pill">360° viewer</span><span class="pill">Light-level showroom</span><span class="pill">Quote-led catalogue</span><span class="pill">Admin dashboard</span>
+    </div>
+    <div class="by"><img src="../../assets/brand/acute-circle-emblem.png" alt=""><span>Designed &amp; developed by <b>Acute Circle</b> using <b>Aurum AI</b></span></div>
+  </div>
+</body>
+</html>

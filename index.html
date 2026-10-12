@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>
+  /* Skip the gate for a visitor who already unlocked this session */
+  (function () {
+    var h = '31d7e1681777aa28a58007dc7c351b241ce0f02dc31eefb81bb0d972046c1b84', ok = false;
+    try { ok = sessionStorage.getItem('lumiere-access') === h; } catch (e) {}
+    if (ok || window.name === 'lumiere-access:' + h) location.replace('portfolio.html');
+  })();
+</script>
+
+<!-- Primary -->
+<title>Lumière 3D Portfolio · Private Preview by Acute Circle</title>
+<meta name="description" content="Private preview of Lumière, a WebGL 3D product portfolio for a premium lighting brand with a 360° viewer and quote-led catalogue. Built by Acute Circle.">
+<meta name="keywords" content="Lumière 3D portfolio, 3D product viewer, 360 degree product viewer, WebGL product showcase, Three.js website, interactive 3D website, luxury lighting website, premium lighting e-commerce, quote-led catalogue, product configurator, Acute Circle, Aurum AI, web design agency India">
+<meta name="author" content="Acute Circle">
+<meta name="creator" content="Acute Circle">
+<meta name="publisher" content="Acute Circle">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#080C10">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://media-acute-circle.github.io/lumiere-3d-portfolio/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lumière 3D Portfolio · Acute Circle">
+<meta property="og:locale" content="en_IN">
+<meta property="og:url" content="https://media-acute-circle.github.io/lumiere-3d-portfolio/">
+<meta property="og:title" content="Lumière 3D Portfolio · Private Preview by Acute Circle">
+<meta property="og:description" content="An immersive WebGL 3D product portfolio for a premium lighting brand. Turn every piece 360°, dim the light, request a quote. Built by Acute Circle using Aurum AI.">
+<meta property="og:image" content="https://media-acute-circle.github.io/lumiere-3d-portfolio/assets/og/og-access.jpg">
+<meta property="og:image:secure_url" content="https://media-acute-circle.github.io/lumiere-3d-portfolio/assets/og/og-access.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Lumière 3D Portfolio by Acute Circle: a brass pendant rendered in 3D, with feature pills for WebGL 3D, 360° viewer and quote-led catalogue.">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lumière 3D Portfolio · Private Preview by Acute Circle">
+<meta name="twitter:description" content="An immersive WebGL 3D product portfolio for a premium lighting brand. Turn every piece 360°, dim the light, request a quote.">
+<meta name="twitter:image" content="https://media-acute-circle.github.io/lumiere-3d-portfolio/assets/og/og-access.jpg">
+<meta name="twitter:image:alt" content="Lumière 3D Portfolio by Acute Circle: a brass pendant rendered in 3D.">
+
+<!-- Structured data (answer engines read this) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://acutecircle.com/#org",
+      "name": "Acute Circle",
+      "url": "https://acutecircle.com",
+      "logo": "https://media-acute-circle.github.io/lumiere-3d-portfolio/assets/brand/acute-circle-emblem.png",
+      "description": "Acute Circle is an innovative media and marketing agency that builds web platforms, mobile apps, brand identities and AI-driven digital products.",
+      "email": "info.acutecircle@gmail.com",
+      "telephone": "+91-8791694160",
+      "slogan": "Built by Builders, For Builders"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://media-acute-circle.github.io/lumiere-3d-portfolio/#access",
+      "url": "https://media-acute-circle.github.io/lumiere-3d-portfolio/",
+      "name": "Lumière 3D Portfolio · Private Preview",
+      "description": "Password-protected entry to the Lumière 3D Portfolio, designed and developed by Acute Circle using Aurum AI.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://media-acute-circle.github.io/lumiere-3d-portfolio/#site" },
+      "publisher": { "@id": "https://acutecircle.com/#org" },
+      "primaryImageOfPage": "https://media-acute-circle.github.io/lumiere-3d-portfolio/assets/og/og-access.jpg"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://media-acute-circle.github.io/lumiere-3d-portfolio/#site",
+      "url": "https://media-acute-circle.github.io/lumiere-3d-portfolio/",
+      "name": "Lumière 3D Portfolio",
+      "creator": { "@id": "https://acutecircle.com/#org" }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/png" sizes="64x64" href="assets/icons/acute-circle-64.png">
+<link rel="apple-touch-icon" href="assets/icons/acute-circle-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="preload" as="image" href="assets/brand/acute-circle-emblem.webp" type="image/webp">
+<link rel="stylesheet" href="gate.css?v=3">
+</head>
+<body class="gate">
+<canvas id="gateCanvas" aria-hidden="true"></canvas>
+<div class="gate-bg" aria-hidden="true"></div>
+
+<main class="gate-shell">
+  <section class="gate-card" aria-labelledby="gateTitle">
+    <div class="gate-logo">
+      <span class="gate-logo-ring" aria-hidden="true"></span>
+      <img src="assets/brand/acute-circle-emblem.webp" alt="Acute Circle" width="112" height="112" decoding="async">
+    </div>
+
+    <p class="gate-eyebrow"><span class="gate-dot" aria-hidden="true"></span>Private preview<span class="gate-eyebrow-more">&nbsp;· Lumière 3D Portfolio</span></p>
+    <h1 id="gateTitle">This portfolio is password protected</h1>
+    <p class="gate-lead">The Lumière 3D Portfolio you are accessing was designed and developed by <strong>Acute Circle</strong> using <strong class="gate-grad">Aurum AI</strong>. Enter the access password to continue.</p>
+
+    <form id="gateForm" class="gate-form" novalidate onsubmit="return false;">
+      <label class="gate-label" for="gatePass">Access password</label>
+      <div class="gate-field">
+        <svg class="gate-lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>
+        <input id="gatePass" name="password" type="password" autocomplete="current-password" autocapitalize="off" autocorrect="off" spellcheck="false" required aria-describedby="gateMsg" placeholder="Enter password">
+        <button type="button" class="gate-eye" id="gateEye" aria-label="Show password" aria-pressed="false" aria-controls="gatePass">
+          <svg class="eye-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+          <svg class="eye-shut" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18"/><path d="M10.6 5.1A10.8 10.8 0 0 1 12 5c6.4 0 10 7 10 7a17.6 17.6 0 0 1-3.2 4.2M6.6 6.6C3.8 8.4 2 12 2 12s3.6 7 10 7a9.7 9.7 0 0 0 5.4-1.6"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>
+        </button>
+      </div>
+      <p class="gate-msg" id="gateMsg" role="alert" aria-live="assertive"></p>
+      <button type="submit" class="gate-submit"><span>Unlock portfolio</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </form>
+
+    <a class="gate-help" href="https://wa.me/918791694160?text=Hey%2C%20I%20am%20trying%20to%20access%20the%20Lumi%C3%A8re%203D%20Portfolio%20and%20am%20requesting%20the%20authorization%20password.%20Kindly%20grant%20the%20authorization." target="_blank" rel="noopener">
+      <svg class="gate-wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.4.4 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg>
+      <span><b>Unable to access?</b> Request it on WhatsApp</span>
+      <span class="sr-only">(opens WhatsApp in a new tab)</span>
+    </a>
+  </section>
+
+  <footer class="gate-about">
+    <p><strong>Acute Circle</strong> is an innovative media and marketing agency. We design and build web platforms, mobile apps, brand identities and AI-driven digital products for ambitious businesses.</p>
+    <p class="gate-meta">© 2026 Acute Circle · <a href="https://acutecircle.com" target="_blank" rel="noopener">acutecircle.com</a></p>
+  </footer>
+</main>
+
+<div class="gate-modal" id="gateModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalText" hidden>
+  <div class="gate-modal-card">
+    <span class="gate-modal-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4M12 17h.01"/></svg></span>
+    <h2 id="modalTitle">Having trouble getting in?</h2>
+    <p id="modalText">That is three incorrect attempts. Reach out to the Acute Circle media and support team, and we will share access with you right away.</p>
+    <a class="gate-submit" href="https://wa.me/918791694160?text=Hey%2C%20I%20am%20trying%20to%20access%20the%20Lumi%C3%A8re%203D%20Portfolio%20and%20am%20requesting%20the%20authorization%20password.%20Kindly%20grant%20the%20authorization." target="_blank" rel="noopener">
+      <svg class="gate-wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.4.4 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg>
+      <span>Contact Acute Circle support</span>
+    </a>
+    <button type="button" class="gate-text-btn" data-close>Try again</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="gate.js?v=3"></script>
+<script>
+  /* If gate.js failed to load, say so instead of leaving a dead form */
+  addEventListener('load', function () {
+    if (!document.documentElement.classList.contains('gate-ready')) {
+      document.getElementById('gateMsg').textContent = 'The access screen did not load correctly. Please refresh the page, or request access on WhatsApp below.';
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>
+  /* Private preview: send visitors without an unlocked session to the access screen */
+  (function () {
+    var h = '31d7e1681777aa28a58007dc7c351b241ce0f02dc31eefb81bb0d972046c1b84', ok = false;
+    try { ok = sessionStorage.getItem('lumiere-access') === h; } catch (e) {}
+    if (!ok && window.name !== 'lumiere-access:' + h) location.replace('index.html');
+  })();
+</script>
+
+<!-- Primary -->
+<title>Lumière · Premium Lighting 3D Portfolio by Acute Circle</title>
+<meta name="description" content="Interactive 3D portfolio for a premium lighting brand: turn a WebGL pendant 360°, switch finishes, dim the light and request a quote. By Acute Circle.">
+<meta name="keywords" content="3D product portfolio, WebGL product viewer, 360 degree product viewer, interactive 3D website, Three.js showcase, luxury lighting website, premium lighting brand website, pendant lights, chandeliers, quote-led catalogue, product configurator, lighting e-commerce design, admin dashboard, Acute Circle, Aurum AI">
+<meta name="author" content="Acute Circle">
+<meta name="creator" content="Acute Circle">
+<meta name="publisher" content="Acute Circle">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#F4EFE6">
+<link rel="canonical" href="https://media-acute-circle.github.io/lumiere-3d-portfolio/portfolio.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lumière 3D Portfolio · Acute Circle">
+<meta property="og:locale" content="en_IN">
+<meta property="og:url" content="https://media-acute-circle.github.io/lumiere-3d-portfolio/portfolio.html">
+<meta property="og:title" content="Lumière · Premium Lighting 3D Portfolio">
+<meta property="og:description" content="Turn every piece 360° in WebGL, switch finishes, dim the light and request a quote in under a minute. A quote-led catalogue concept by Acute Circle.">
+<meta property="og:image" content="https://media-acute-circle.github.io/lumiere-3d-portfolio/assets/og/og-portfolio.jpg">
+<meta property="og:image:secure_url" content="https://media-acute-circle.github.io/lumiere-3d-portfolio/assets/og/og-portfolio.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Lumière premium lighting 3D portfolio: a brass pendant lit in a dark gallery, with pills for WebGL 3D, 360° viewer, light-level showroom and admin dashboard.">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lumière · Premium Lighting 3D Portfolio">
+<meta name="twitter:description" content="Turn every piece 360° in WebGL, switch finishes, dim the light and request a quote. By Acute Circle.">
+<meta name="twitter:image" content="https://media-acute-circle.github.io/lumiere-3d-portfolio/assets/og/og-portfolio.jpg">
+<meta name="twitter:image:alt" content="Lumière premium lighting 3D portfolio by Acute Circle.">
+
+<!-- Structured data: the page is gated, so mark the content as not freely accessible -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://acutecircle.com/#org",
+      "name": "Acute Circle",
+      "url": "https://acutecircle.com",
+      "logo": "https://media-acute-circle.github.io/lumiere-3d-portfolio/assets/brand/acute-circle-emblem.png",
+      "email": "info.acutecircle@gmail.com",
+      "telephone": "+91-8791694160"
+    },
+    {
+      "@type": ["WebPage", "CreativeWork"],
+      "@id": "https://media-acute-circle.github.io/lumiere-3d-portfolio/portfolio.html#page",
+      "url": "https://media-acute-circle.github.io/lumiere-3d-portfolio/portfolio.html",
+      "name": "Lumière · Premium Lighting 3D Portfolio",
+      "headline": "Light that reads beautifully from every angle",
+      "description": "An interactive 3D product portfolio for a premium lighting brand, with a WebGL 360° product viewer, finish swatches, a light-level showroom, a three-step quote form and an admin dashboard.",
+      "inLanguage": "en",
+      "dateCreated": "2026-10-12",
+      "creator": { "@id": "https://acutecircle.com/#org" },
+      "publisher": { "@id": "https://acutecircle.com/#org" },
+      "image": "https://media-acute-circle.github.io/lumiere-3d-portfolio/assets/og/og-portfolio.jpg",
+      "keywords": "3D product viewer, 360 degree product viewer, WebGL, Three.js, luxury lighting website, quote-led catalogue, admin dashboard",
+      "about": ["Product visualisation", "Lighting e-commerce", "Interactive 3D web design"],
+      "isAccessibleForFree": false,
+      "hasPart": { "@type": "WebPageElement", "isAccessibleForFree": false, "cssSelector": ".gated" }
+    }
+  ]
+}
+</script>
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..700&family=Cormorant+Garamond:ital,wght@0,400..700;1,400..600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400..700&family=Karla:wght@400..700&family=Manrope:wght@400..800&family=Space+Grotesk:wght@400..700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="atelier">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- Direction switcher (presentation chrome) -->
+<nav class="dock" aria-label="Design direction">
+  <button type="button" data-set-theme="atelier" aria-pressed="true"><b>01</b><span class="long">Warm Atelier</span><span class="short">Atelier</span></button>
+  <button type="button" data-set-theme="gallery" aria-pressed="false"><b>02</b><span class="long">Dark Gallery</span><span class="short">Gallery</span></button>
+  <button type="button" data-set-theme="studio" aria-pressed="false"><b>03</b><span class="long">Studio Light</span><span class="short">Studio</span></button>
+</nav>
+
+<!-- Website navigation -->
+<header class="nav" id="nav">
+  <nav aria-label="Primary">
+  <div class="wrap nav-inner">
+    <a href="#home" class="logo" aria-label="Lumière, back to top">Lumière<sup aria-hidden="true">*</sup></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#collections">Collections</a>
+      <a href="#view360">Product</a>
+      <a href="#showroom">Showroom</a>
+      <a href="#admin-intro">Dashboard</a>
+      <a href="#plan">Launch plan</a>
+    </div>
+    <div class="nav-actions">
+      <a href="#quote" class="btn btn-solid btn-sm nav-cta" data-magnetic data-cursor="Quote">Request a quote</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="navLinks"><span class="burger-icon" aria-hidden="true"></span>Menu</button>
+    </div>
+  </div>
+  </nav>
+</header>
+
+<main id="main" class="gated" tabindex="-1">
+  <!-- HERO: immersive 3D pendant -->
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <p class="hero-top mono"><span class="idx">N° 01</span><span>Concept for a premium lighting brand</span></p>
+
+      <div class="hero-copy">
+        <p class="hero-kicker">Handcrafted lighting for homes and the trade</p>
+        <h1 class="hero-title" id="hero-title">Light that reads beautifully from <em>every angle.</em></h1>
+        <p class="lead">Turn each piece through 360°, dim it to see the glow, and request a quote in under a minute.</p>
+        <div class="actions">
+          <a href="#quote" class="btn btn-solid" data-magnetic data-cursor="Quote">Request a quote <span class="arr" aria-hidden="true">→</span></a>
+          <a href="#collections" class="btn btn-line" data-magnetic>Explore collections</a>
+        </div>
+      </div>
+
+      <dl class="hero-facts">
+        <div><dt>Store opens</dt><dd>20 Oct 2026</dd></div>
+        <div><dt>Warranty</dt><dd>2 years<sup>*</sup></dd></div>
+        <div><dt>Quote reply</dt><dd>1 working day<sup>*</sup></dd></div>
+      </dl>
+
+      <div class="hero-stage" id="heroStage" tabindex="0" role="group" aria-roledescription="3D viewer" aria-label="Halo Pendant in Brass, 3D view. Drag or use the arrow keys to rotate it 360 degrees." data-cursor="Drag">
+        <div class="hero-bloom" aria-hidden="true"></div>
+        <span class="hero-word is-in" id="heroWord" aria-hidden="true">Halo</span>
+        <canvas id="heroCanvas" aria-hidden="true"></canvas>
+        <svg class="hero-fallback" viewBox="0 0 400 400" aria-hidden="true"><defs><linearGradient id="hfS" x1="0" x2="1"><stop offset="0" stop-color="#5E4420"/><stop offset=".5" stop-color="#F3DDAA"/><stop offset="1" stop-color="#5E4420"/></linearGradient><radialGradient id="hfG"><stop offset="0" stop-color="#FFE7AE" stop-opacity=".9"/><stop offset="1" stop-color="#FFE7AE" stop-opacity="0"/></radialGradient></defs><rect x="199" y="0" width="2" height="150" fill="#5E4420"/><path d="M160 150 Q200 140 240 150 L290 260 Q200 280 110 260 Z" fill="url(#hfS)"/><ellipse cx="200" cy="262" rx="88" ry="14" fill="#FFF0C4"/><ellipse cx="200" cy="340" rx="160" ry="40" fill="url(#hfG)"/></svg>
+        <span class="hero-loading mono" aria-hidden="true">Loading 3D view</span>
+      </div>
+
+      <div class="hero-switch" role="group" aria-label="Choose a model">
+        <button type="button" class="round-btn" data-model-step="-1" aria-label="Previous model">←</button>
+        <span class="mono"><b id="heroIndex">01</b> / 03</span>
+        <button type="button" class="round-btn" data-model-step="1" aria-label="Next model">→</button>
+      </div>
+
+      <div class="hero-dial" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><circle class="track" cx="24" cy="24" r="21"/><circle class="prog" id="heroDialProg" cx="24" cy="24" r="21" pathLength="360"/></svg>
+        <p><b id="heroDeg">000°</b><span class="key-hint">Drag or use ← → to rotate</span><span class="touch-hint">Drag to rotate 360°</span></p>
+      </div>
+
+      <aside class="hero-panel" aria-label="Product details">
+        <div class="hp-head">
+          <div><p class="hp-name" id="heroName" aria-live="polite">Halo Pendant</p><p class="hp-code mono" id="heroCode">AC-PD-01 · Pendants</p></div>
+          <p class="hp-price" id="heroPrice">Rs. 18,500<sup>*</sup></p>
+        </div>
+        <dl class="hp-specs">
+          <div><dt>Power</dt><dd id="heroW">18 W</dd></div>
+          <div><dt>Output</dt><dd id="heroLm">1,900 lm</dd></div>
+          <div><dt>Colour</dt><dd id="heroK">3000 K</dd></div>
+        </dl>
+        <div class="hp-row">
+          <p class="hp-label" id="heroFinishLabel">Finish <b id="heroFinish">Brass</b></p>
+          <div class="hp-swatches" role="group" aria-labelledby="heroFinishLabel">
+            <button type="button" class="swatch" data-hero-finish="brass" aria-pressed="true" aria-label="Brass" style="background:linear-gradient(135deg,#F3DDAA,#B08A4E 55%,#5E4420)"></button>
+            <button type="button" class="swatch" data-hero-finish="nickel" aria-pressed="false" aria-label="Nickel" style="background:linear-gradient(135deg,#FBFBFA,#A9ACB2 55%,#4A4E55)"></button>
+            <button type="button" class="swatch" data-hero-finish="graphite" aria-pressed="false" aria-label="Graphite" style="background:linear-gradient(135deg,#7A818E,#33383F 55%,#121418)"></button>
+            <button type="button" class="swatch" data-hero-finish="smoke" aria-pressed="false" aria-label="Smoke glass" style="background:linear-gradient(135deg,#E9DCC2,#8F7C5C 55%,#2A241B)"></button>
+          </div>
+        </div>
+        <div class="hp-row">
+          <label class="hp-label" for="heroDim">Light <b id="heroDimOut">80%</b></label>
+          <div class="hp-light">
+            <button type="button" class="toggle" role="switch" aria-checked="true" id="heroPower" aria-label="Light on"></button>
+            <input type="range" id="heroDim" min="0" max="100" value="80">
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS INDEX -->
+  <nav class="index-strip" aria-label="Collections index">
+    <div class="wrap index-inner">
+      <a href="#collections"><span class="mono">01</span>Pendants</a>
+      <a href="#collections"><span class="mono">02</span>Chandeliers</a>
+      <a href="#collections"><span class="mono">03</span>Wall lights</a>
+      <a href="#collections"><span class="mono">04</span>Floor lamps</a>
+      <a href="#collections"><span class="mono">05</span>Outdoor</a>
+    </div>
+  </nav>
+
+  <!-- COLLECTIONS -->
+  <section class="section" id="collections">
+    <div class="wrap">
+      <div class="head-row reveal">
+        <div class="heading-block">
+          <span class="eyebrow"><span class="idx">02</span>Collections</span>
+          <h2 class="h-2">Four families, one finish language</h2>
+        </div>
+        <a href="#quote" class="btn btn-line" data-magnetic>Ask about a piece <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="grid-cats">
+        <a href="#view360" class="cat span-7 reveal" data-cursor="View">
+          <div class="art" data-art="pendant" aria-hidden="true"></div>
+          <div><span class="tag">Pendants · 12 pieces<sup>*</sup></span></div>
+          <div><h3>Pendants</h3><p class="sub">Slim shades, hand-finished in four metals.</p><span class="go">Open in 360° <span>→</span></span></div>
+        </a>
+        <a href="#showroom" class="cat span-5 reveal" style="--d:.1s" data-cursor="Light">
+          <div class="art" data-art="chandelier" aria-hidden="true"></div>
+          <div><span class="tag">Chandeliers · 5 pieces<sup>*</sup></span></div>
+          <div><h3>Chandeliers</h3><p class="sub">Statement pieces, shown lit and unlit.</p><span class="go">See light levels <span>→</span></span></div>
+        </a>
+        <a href="#view360" class="cat span-4 reveal" data-cursor="View">
+          <div class="art" data-art="wall" aria-hidden="true"></div>
+          <div><span class="tag">Wall lights<sup>*</sup></span></div>
+          <div><h3>Wall lights</h3><p class="sub">Sconces with spec data on every card.</p><span class="go">View specs <span>→</span></span></div>
+        </a>
+        <a href="#view360" class="cat span-4 reveal" style="--d:.08s" data-cursor="View">
+          <div class="art" data-art="floor" aria-hidden="true"></div>
+          <div><span class="tag">Floor lamps<sup>*</sup></span></div>
+          <div><h3>Floor lamps</h3><p class="sub">Reading and ambient lamps, indoor.</p><span class="go">View finishes <span>→</span></span></div>
+        </a>
+        <a href="#view360" class="cat span-4 reveal" style="--d:.16s" data-cursor="View">
+          <div class="art" data-art="outdoor" aria-hidden="true"></div>
+          <div><span class="tag">Outdoor · IP65<sup>*</sup></span></div>
+          <div><h3>Outdoor</h3><p class="sub">Weather-rated lanterns for terraces.</p><span class="go">Check rating <span>→</span></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3D RING -->
+  <section class="section section-tight" id="range" aria-labelledby="range-title">
+    <div class="wrap">
+      <div class="head-row reveal">
+        <div class="heading-block">
+          <span class="eyebrow"><span class="idx">03</span>The range in 3D</span>
+          <h2 class="h-2" id="range-title">Walk around the range</h2>
+        </div>
+        <p class="lead">Drag the ring, or let it turn. Every piece is shown in its real finish.</p>
+      </div>
+      <div class="ring-stage reveal" id="ringStage" data-cursor="Drag" tabindex="0" role="group" aria-roledescription="3D carousel" aria-label="Product range in 3D" aria-describedby="ringHint">
+        <div class="ring" id="ring"></div>
+      </div>
+      <p class="ring-hint" id="ringHint"><span class="key-hint">Drag, or use <kbd>←</kbd> <kbd>→</kbd> to turn the ring</span><span class="touch-hint">Swipe sideways to turn the ring</span></p>
+    </div>
+  </section>
+
+  <!-- 360 VIEWER + PRODUCT -->
+  <section class="section sep" id="view360" aria-labelledby="product-title">
+    <div class="wrap split">
+      <div class="reveal">
+        <div class="viewer" id="viewer" data-cursor="Drag" tabindex="0" role="group" aria-roledescription="360° viewer" aria-label="Halo Pendant, 360° view" aria-describedby="viewerHelp">
+          <div class="viewer-inner" id="viewerInner"></div>
+          <span class="tag tag-top">360° · drag to turn</span>
+          <span class="deg" id="viewerDeg" aria-hidden="true">200° / 360°</span>
+          <div class="ctrls">
+            <button class="round-btn" id="zoomOut" type="button" aria-label="Zoom out">−</button>
+            <button class="round-btn" id="zoomReset" type="button" aria-label="Reset zoom">⟲</button>
+            <button class="round-btn" id="zoomIn" type="button" aria-label="Zoom in">+</button>
+          </div>
+        </div>
+        <p class="viewer-help" id="viewerHelp"><span class="key-hint">Drag or use <kbd>←</kbd> <kbd>→</kbd> to turn · <kbd>+</kbd> <kbd>−</kbd> to zoom · double-click to reset</span><span class="touch-hint">Drag to turn · use the buttons to zoom</span></p>
+      </div>
+
+      <div class="reveal product-info" style="--d:.12s">
+        <span class="eyebrow"><span class="idx">04</span>Product page</span>
+        <h2 class="h-2 product-title" id="product-title">Halo Pendant</h2>
+        <p class="product-code mono muted">AC-PD-01 · Pendants</p>
+        <p class="lead">A slim shade in hand-finished metal. Turn it, zoom in on the seam, and see the exact finish before you choose.</p>
+
+        <div class="block">
+          <p class="label-row mono muted" id="finishLabel">Finish · <span id="finishName" aria-live="polite">Brass</span></p>
+          <div class="swatches" role="group" aria-labelledby="finishLabel">
+            <button type="button" class="swatch" data-finish="brass" aria-pressed="true" aria-label="Brass" style="background:linear-gradient(135deg,#F3DDAA,#B08A4E 55%,#5E4420)"></button>
+            <button type="button" class="swatch" data-finish="nickel" aria-pressed="false" aria-label="Nickel" style="background:linear-gradient(135deg,#FBFBFA,#A9ACB2 55%,#4A4E55)"></button>
+            <button type="button" class="swatch" data-finish="graphite" aria-pressed="false" aria-label="Graphite" style="background:linear-gradient(135deg,#7A818E,#33383F 55%,#121418)"></button>
+            <button type="button" class="swatch" data-finish="smoke" aria-pressed="false" aria-label="Smoke glass" style="background:linear-gradient(135deg,#E9DCC2,#8F7C5C 55%,#2A241B)"></button>
+          </div>
+        </div>
+
+        <div class="block">
+          <div class="tabs" role="tablist" aria-label="Product details">
+            <button type="button" role="tab" id="tab-specs" aria-controls="panel-specs" data-spec-tab="specs" aria-selected="true">Specifications</button>
+            <button type="button" role="tab" id="tab-install" aria-controls="panel-install" data-spec-tab="install" aria-selected="false" tabindex="-1">Installation</button>
+            <button type="button" role="tab" id="tab-docs" aria-controls="panel-docs" data-spec-tab="docs" aria-selected="false" tabindex="-1">Downloads</button>
+          </div>
+          <div class="block tab-panel" role="tabpanel" id="panel-specs" aria-labelledby="tab-specs" data-spec-panel="specs">
+            <dl class="specs">
+              <div><dt>Size</dt><dd>60 × 40 cm</dd></div>
+              <div><dt>Light source</dt><dd>LED 18 W</dd></div>
+              <div><dt>Brightness</dt><dd>1,900 lm</dd></div>
+              <div><dt>Colour temperature</dt><dd>3000 K</dd></div>
+              <div><dt>IP rating</dt><dd>IP20 · indoor</dd></div>
+              <div><dt>Warranty</dt><dd>2 years<sup>*</sup></dd></div>
+            </dl>
+          </div>
+          <div class="block tab-panel" role="tabpanel" id="panel-install" aria-labelledby="tab-install" data-spec-panel="install" hidden><p>Hang between 1.8 and 2.4 m. Canopy and cable included. Certified electrician recommended.</p></div>
+          <div class="block tab-panel" role="tabpanel" id="panel-docs" aria-labelledby="tab-docs" data-spec-panel="docs" hidden><p>Spec sheet, IES file and installation guide are available once the product data is added. Missing specifications are hidden, never guessed.</p></div>
+        </div>
+
+        <div class="actions actions-price">
+          <a href="#quote" class="btn btn-solid" data-magnetic>Request a quote <span class="arr" aria-hidden="true">→</span></a>
+          <span class="price-note muted">Rs. 18,500<sup>*</sup> · trade price on request, reply within one working day</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWROOM: light compare -->
+  <section class="section sep" id="showroom" aria-labelledby="showroom-title">
+    <div class="wrap">
+      <div class="head-row reveal">
+        <div class="heading-block">
+          <span class="eyebrow"><span class="idx">05</span>Showroom</span>
+          <h2 class="h-2" id="showroom-title">See the light in the room</h2>
+        </div>
+        <p class="lead">Slide from dark to lit. Product pages show a lit photo at launch, with an interactive preview in a later phase.</p>
+      </div>
+      <div class="compare reveal" id="compare" role="group" aria-label="Sample room lit by a pendant. Use the light level slider to dim it.">
+        <div class="veil" aria-hidden="true"></div>
+        <div class="hud">
+          <label for="lightRange">Light level</label>
+          <input type="range" min="0" max="100" value="60" id="lightRange">
+          <output id="lightOut" for="lightRange">60%</output>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE ADD: gaps from the reference review -->
+  <section class="section sep" id="why" aria-labelledby="why-title">
+    <div class="wrap">
+      <div class="head-row reveal">
+        <div class="heading-block">
+          <span class="eyebrow"><span class="idx">06</span>What other sites miss</span>
+          <h2 class="h-2" id="why-title">A product page that answers like a salesperson</h2>
+        </div>
+        <p class="lead">We read seven reference sites. Most sell lighting well, but leave the buyer to do the hard work. Here is what this site adds.</p>
+      </div>
+      <ol class="gaps">
+        <li class="gap-card reveal"><span class="gap-n">01</span><h3>Full specifications</h3><p>Wattage, lumens, colour temperature, IP rating and size on every product, so buyers compare without calling.</p><span class="gap-was mono muted">Missing on most listings</span></li>
+        <li class="gap-card reveal" style="--d:.06s"><span class="gap-n">02</span><h3>Zoom and 360° finish</h3><p>Turn the piece and zoom on the seam. The buyer sees the craft from home.</p><span class="gap-was mono muted">Missing on most sites</span></li>
+        <li class="gap-card reveal" style="--d:.12s"><span class="gap-n">03</span><h3>Light-on view</h3><p>A lit photo at launch and an interactive preview later, showing what the fixture does with the light on.</p><span class="gap-was mono muted">Missing on all seven</span></li>
+        <li class="gap-card reveal" style="--d:.18s"><span class="gap-n">04</span><h3>A clear next step</h3><p>The quote form says when the buyer will hear back, which removes doubt.</p><span class="gap-was mono muted">Unclear on most sites</span></li>
+        <li class="gap-card reveal"><span class="gap-n">05</span><h3>Install and warranty</h3><p>An install note and warranty on every product, the questions architects ask first.</p><span class="gap-was mono muted">Missing on pages read</span></li>
+        <li class="gap-card reveal" style="--d:.06s"><span class="gap-n">06</span><h3>Project proof</h3><p>Project pages with credited designers build trust with trade buyers.</p><span class="gap-was mono muted">Thin on most sites</span></li>
+        <li class="gap-card reveal" style="--d:.12s"><span class="gap-n">07</span><h3>Honest pricing</h3><p>Price on request comes with a short reason and a response time, which sets the right expectation.</p><span class="gap-was mono muted">Hidden on several sites</span></li>
+        <li class="gap-card reveal" style="--d:.18s"><span class="gap-n">08</span><h3>Tours that sell</h3><p>Showroom hotspots open the product, turning a visit into a product view (later phase).</p><span class="gap-was mono muted">Not linked on White Teak</span></li>
+      </ol>
+      <p class="gaps-note muted reveal">These gaps come from the pages we read. We will confirm them on more product pages before the design review.</p>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="section sep" id="quote" aria-labelledby="quote-title">
+    <div class="wrap split">
+      <div class="reveal heading-block">
+        <span class="eyebrow"><span class="idx">07</span>Request a quote</span>
+        <h2 class="h-2" id="quote-title">Three steps. One reply.</h2>
+        <p class="lead">Tell us the piece, the room and when you need it. Your enquiry lands in the dashboard with the page it came from.</p>
+        <dl class="quote-facts">
+          <div><dt class="mono muted">Average reply time</dt><dd>1 working day<sup>*</sup></dd></div>
+          <div><dt class="mono muted">Trade pricing</dt><dd>For architects and designers<sup>*</sup></dd></div>
+        </dl>
+        <p class="quote-alt muted">Prefer to talk? <a class="btn btn-line btn-sm" href="https://wa.me/918791694160" target="_blank" rel="noopener">Chat on WhatsApp <span class="sr-only">(opens in a new tab)</span></a></p>
+      </div>
+
+      <form class="form-card reveal" id="quoteForm" style="--d:.1s" novalidate aria-labelledby="quote-title">
+        <div class="form-body">
+          <div class="form-head mono muted"><span id="stepLabel" aria-live="polite">Step 1 of 3 · Your details</span><span><span aria-hidden="true">*</span> Required</span></div>
+          <div class="progress-steps" aria-hidden="true"><i></i><i></i><i></i></div>
+
+          <div class="step">
+            <label class="field"><span>Full name <span aria-hidden="true">*</span></span><input required aria-required="true" name="name" autocomplete="name" placeholder="Your name"></label>
+            <label class="field"><span>Email <span aria-hidden="true">*</span></span><input required aria-required="true" type="email" name="email" autocomplete="email" placeholder="name@example.com"></label>
+            <label class="field wide"><span>Phone or WhatsApp</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+91"></label>
+            <div class="step-actions wide"><button type="button" class="btn btn-solid" data-next>Continue <span class="arr" aria-hidden="true">→</span></button></div>
+          </div>
+
+          <div class="step">
+            <fieldset class="wide fieldset">
+              <legend class="mono muted">Which pieces interest you?</legend>
+              <div class="chips">
+                <label><input type="checkbox" name="p" value="pendant"><span>Pendants</span></label>
+                <label><input type="checkbox" name="p" value="chandelier"><span>Chandeliers</span></label>
+                <label><input type="checkbox" name="p" value="wall"><span>Wall lights</span></label>
+                <label><input type="checkbox" name="p" value="floor"><span>Floor lamps</span></label>
+                <label><input type="checkbox" name="p" value="outdoor"><span>Outdoor</span></label>
+              </div>
+            </fieldset>
+            <label class="field"><span>City <span aria-hidden="true">*</span></span><input required aria-required="true" name="city" autocomplete="address-level2" placeholder="Pune, Mumbai, Delhi..."></label>
+            <label class="field"><span>Room or project</span><select name="room"><option>Home</option><option>Office</option><option>Hotel or hospitality</option><option>Architect or designer project</option></select></label>
+            <div class="step-actions wide"><button type="button" class="btn btn-line" data-back>Back</button><button type="button" class="btn btn-solid" data-next>Continue <span class="arr" aria-hidden="true">→</span></button></div>
+          </div>
+
+          <div class="step">
+            <label class="field"><span>When do you need it?</span><select name="when"><option>This month</option><option>In 1 to 3 months</option><option>Planning only</option></select></label>
+            <label class="field"><span>Budget band</span><select name="budget"><option>Under Rs. 25,000</option><option>Rs. 25,000 to 1 lakh</option><option>Above Rs. 1 lakh</option></select></label>
+            <label class="field wide"><span>Anything else we should know</span><textarea name="msg" placeholder="Ceiling height, room size, finish preference"></textarea></label>
+            <div class="step-actions wide"><button type="button" class="btn btn-line" data-back>Back</button><button type="submit" class="btn btn-solid" data-magnetic>Send enquiry <span class="arr" aria-hidden="true">→</span></button></div>
+          </div>
+        </div>
+
+        <div class="form-done" hidden role="status">
+          <span class="eyebrow">Enquiry received</span>
+          <h3 class="h-2 done-title" tabindex="-1">Thank you</h3>
+          <p class="lead">Reference <b data-ref class="mono">AC-00000</b>. A member of the team replies within one working day<sup>*</sup>.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="section sep" aria-labelledby="trust-title">
+    <div class="wrap">
+      <div class="head-row reveal">
+        <div class="heading-block">
+          <span class="eyebrow"><span class="idx">08</span>Why buy here</span>
+          <h2 class="h-2" id="trust-title">Built to earn trust before the first call</h2>
+        </div>
+      </div>
+      <div class="trust-grid">
+        <div class="stat reveal"><div class="stat-n" data-count="2">0</div><p class="muted">Years of warranty<sup>*</sup></p></div>
+        <div class="stat reveal" style="--d:.08s"><div class="stat-n" data-count="60">0</div><p class="muted">Hours of finish checks per batch<sup>*</sup></p></div>
+        <div class="stat reveal" style="--d:.16s"><div class="stat-n" data-count="15">0</div><p class="muted">Launch pieces, each with full specs<sup>*</sup></p></div>
+        <div class="stat reveal" style="--d:.24s"><div class="stat-n" data-count="1">0</div><p class="muted">Working day to reply<sup>*</sup></p></div>
+      </div>
+      <div class="split reveal trust-split">
+        <figure class="surface quote-card">
+          <span class="mono muted">Sample client note<sup>*</sup></span>
+          <blockquote>“The pendant looked exactly like the 360 view when it hung in our hall. Nothing surprised us.”</blockquote>
+          <figcaption class="muted">Interior designer, Pune<sup>*</sup></figcaption>
+        </figure>
+        <div class="surface visit-card">
+          <div class="visit-glow" aria-hidden="true"></div>
+          <div class="visit-body">
+            <span class="eyebrow">Store opens 20 October</span>
+            <p class="visit-title">Visit to touch the finishes before you buy</p>
+            <p class="muted">Address and hours to confirm<sup>*</sup></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADMIN PANEL -->
+  <section class="section sep" id="admin-intro" aria-labelledby="admin-title">
+    <div class="wrap">
+      <div class="head-row reveal">
+        <div class="heading-block">
+          <span class="eyebrow"><span class="idx">09</span>Admin dashboard</span>
+          <h2 class="h-2" id="admin-title">The panel your team works in every day</h2>
+        </div>
+        <p class="lead">Products, photos, prices, leads and pages in one place. Built for us to hand over, with no WordPress and no third-party CMS.</p>
+      </div>
+
+      <div class="admin reveal" id="admin" role="region" aria-label="Admin dashboard demo with sample data">
+        <div class="admin-shell">
+          <nav class="admin-side" aria-label="Dashboard sections">
+            <div class="who"><i>L</i>Lumière Studio</div>
+            <small>Workspace</small>
+            <button type="button" class="nav-item" data-view="overview" aria-current="page">Overview</button>
+            <button type="button" class="nav-item" data-view="products">Products <span class="count" id="liveCount">5</span></button>
+            <button type="button" class="nav-item" data-view="editor">Product editor</button>
+            <button type="button" class="nav-item" data-view="leads">Leads <span class="count" id="newCount">2</span></button>
+            <button type="button" class="nav-item" data-view="pages">Pages</button>
+            <small>Later phases</small>
+            <button type="button" class="nav-item" disabled>AI writer</button>
+            <button type="button" class="nav-item" disabled>Social media</button>
+          </nav>
+
+          <div class="admin-main">
+            <div class="admin-view" data-view="overview">
+              <div class="admin-top"><h3>Overview</h3><span class="sample-chip">Sample data</span></div>
+              <div class="kpis">
+                <div class="kpi"><span>Visitors this week</span><b data-count="4820">0</b><em>+12%</em></div>
+                <div class="kpi"><span>Enquiries</span><b id="leadTotal">5</b><em>+3 new</em></div>
+                <div class="kpi"><span>Live products</span><b>5</b><em>of 6 ready</em></div>
+                <div class="kpi"><span>Quote rate</span><b>3.1%</b><em>+0.4 pts</em></div>
+              </div>
+              <div class="grid-2">
+                <div class="panel"><h4>Visits by day</h4><p class="sub">Last 7 days</p><div class="bars" id="bars"></div></div>
+                <div class="panel"><h4>Latest enquiries</h4><p class="sub">From the website</p>
+                  <div class="mini-list">
+                    <div><span>Ananya R.</span><span class="badge">New</span></div>
+                    <div><span>Vikram Shah</span><span class="badge">New</span></div>
+                    <div><span>Meera Iyer</span><span class="badge ok">Contacted</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="admin-view" data-view="products" hidden>
+              <div class="admin-top"><h3>Products</h3><span class="sample-chip">Sample data</span></div>
+              <div class="uplift panel">
+                <span class="muted">Price change</span>
+                <input type="range" min="0" max="30" value="0" id="uplift" aria-label="Price increase percentage">
+                <output id="upliftOut">+0%</output>
+                <button type="button" class="btn btn-solid btn-sm" id="applyUplift">Apply to all</button>
+              </div>
+              <div class="table-wrap">
+                <table class="tbl">
+                  <thead><tr><th>Product</th><th class="col-md">Category</th><th class="num">Base price</th><th class="num">Live price</th><th class="col-md">Status</th><th class="num">Show</th></tr></thead>
+                  <tbody id="prodRows"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="admin-view" data-view="editor" hidden>
+              <div class="admin-top"><h3>Product editor</h3><button type="button" class="btn btn-line btn-sm" id="saveDraft">Save draft</button></div>
+              <div class="editor">
+                <div class="fields">
+                  <label>Product name<input id="edName" autocomplete="off" value="Halo Pendant"></label>
+                  <div class="field-pair">
+                    <label>Category<select id="edCat"><option>Pendants</option><option>Chandeliers</option><option>Wall lights</option><option>Floor lamps</option><option>Outdoor</option></select></label>
+                    <label>Price (Rs.)<input id="edPrice" type="number" value="18500"></label>
+                  </div>
+                  <label>Description<textarea id="edDesc">A slim shade in hand-finished metal, with a warm 3000 K light.</textarea></label>
+                  <div class="drop" id="drop" role="button" tabindex="0" aria-label="Upload a product photo">Drop a product photo here, or click to upload<input type="file" accept="image/*" id="file"></div>
+                </div>
+                <div class="preview-card">
+                  <div class="pic" id="pvPic"></div>
+                  <div class="body"><b id="pvName">Halo Pendant</b><span class="muted" id="pvPrice">Rs. 18,500</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="admin-view" data-view="leads" hidden>
+              <div class="admin-top"><h3>Leads</h3><span class="muted">Tap a card to move it along</span></div>
+              <div class="kanban" id="kanban">
+                <div class="col" data-col="new"><h5>New <span class="n">0</span></h5><div class="list"></div></div>
+                <div class="col" data-col="contacted"><h5>Contacted <span class="n">0</span></h5><div class="list"></div></div>
+                <div class="col" data-col="closed"><h5>Closed <span class="n">0</span></h5><div class="list"></div></div>
+              </div>
+            </div>
+
+            <div class="admin-view" data-view="pages" hidden>
+              <div class="admin-top"><h3>Pages</h3><span class="muted">Nine public pages</span></div>
+              <div class="pages-list" id="pageList"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-row">
+        <div class="surface card-sm reveal"><span class="mono muted">Your team</span><h3 class="h-3">Edit in minutes</h3><p class="muted">Names, prices, photos, descriptions and visibility.</p></div>
+        <div class="surface card-sm reveal" style="--d:.08s"><span class="mono muted">Support</span><h3 class="h-3">60 hours free<sup>*</sup></h3><p class="muted">Two months after launch for new pages and fixes.</p></div>
+        <div class="surface card-sm reveal" style="--d:.16s"><span class="mono muted">Leads</span><h3 class="h-3">Saved on arrival</h3><p class="muted">Every enquiry lands in the dashboard, and the owner gets an email alert.</p></div>
+        <div class="surface card-sm reveal" style="--d:.24s"><span class="mono muted">Roles</span><h3 class="h-3">Owner and Editor</h3><p class="muted">Owners control prices and users. Editors handle products, content and enquiries.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERY PHASES -->
+  <section class="section sep" id="phases" aria-labelledby="phases-title">
+    <div class="wrap">
+      <div class="head-row reveal">
+        <div class="heading-block">
+          <span class="eyebrow"><span class="idx">10</span>Delivery phases</span>
+          <h2 class="h-2" id="phases-title">Launch first, then grow</h2>
+        </div>
+      </div>
+      <div class="timeline reveal">
+        <div><span class="pill on">MVP · by 20 Oct</span><h3 class="h-3 phase-title">Launch-ready site</h3><div class="bar" aria-hidden="true"><i style="--w:100%"></i></div><ul><li>9 public pages and the admin dashboard</li><li>10 to 15 products with zoom, 360° photos and specs</li><li>Quote form with email alert and WhatsApp</li><li>Basic analytics, tested on Android and iPhone</li></ul></div>
+        <div><span class="pill">Post-MVP · first months</span><h3 class="h-3 phase-title">Grow the range</h3><div class="bar" aria-hidden="true"><i style="--w:60%"></i></div><ul><li>Full catalogue in batches</li><li>Projects page with credited designers</li><li>Architects and designers page, compare tool</li><li>3D viewers as models arrive, bulk price updates</li></ul></div>
+        <div><span class="pill">Later phases</span><h3 class="h-3 phase-title">Immersive and AI</h3><div class="bar" aria-hidden="true"><i style="--w:30%"></i></div><ul><li>3D showroom tour with product hotspots</li><li>Light-on preview and AR placement</li><li>Trade login and product configurator</li><li>AI writer, marketing and social panel</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAN TO 20 OCTOBER + WHAT WE NEED -->
+  <section class="section sep" id="plan" aria-labelledby="plan-title">
+    <div class="wrap">
+      <div class="head-row reveal">
+        <div class="heading-block">
+          <span class="eyebrow"><span class="idx">11</span>Plan to 20 October</span>
+          <h2 class="h-2" id="plan-title">Eight days to launch day</h2>
+        </div>
+        <p class="lead">A focused MVP, built around the store opening. Here is who does what, and what we need from you to start.</p>
+      </div>
+      <div class="split plan-split">
+        <div class="reveal">
+          <ol class="plan-list">
+            <li><time datetime="2026-10-13">13 Oct</time><div><b>Choose 10 to 15 pieces for launch</b><small>Client and Acute Circle</small></div></li>
+            <li><time datetime="2026-10-14">14 Oct</time><div><b>Product photos and specifications received</b><small>Client</small></div></li>
+            <li><time datetime="2026-10-15">15–17 Oct</time><div><b>Build pages, product templates, quote form and WhatsApp link</b><small>Acute Circle</small></div></li>
+            <li><time datetime="2026-10-18">18 Oct</time><div><b>Client reviews the site and sends corrections</b><small>Client</small></div></li>
+            <li><time datetime="2026-10-19">19 Oct</time><div><b>Test on phones, check form and email routing, load final content</b><small>Acute Circle</small></div></li>
+            <li class="is-launch"><time datetime="2026-10-20">20 Oct</time><div><b>Launch on store opening day</b><small>Both</small></div></li>
+          </ol>
+          <p class="plan-risk muted">The main risk is photos and specifications. If they arrive after 14 October, we launch with fewer products and add the rest in the first weeks.</p>
+        </div>
+        <div class="reveal" style="--d:.1s">
+          <h3 class="h-3">What we need from you</h3>
+          <ol class="needs">
+            <li>The 10 to 15 pieces you most want online first, with names and codes.</li>
+            <li>Photos of each piece, and any existing 3D files or CAD drawings.</li>
+            <li>Specifications: size, wattage, lumens, colour temperature, IP rating and warranty.</li>
+            <li>The person who will answer quote requests, their phone number, and how fast they can reply.</li>
+            <li>Your logo, and any brand colours or fonts.</li>
+          </ol>
+          <p class="needs-note muted">Also name the two or three people who will use the admin dashboard. If anything is not ready, tell us and we will work around it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING (always dark) -->
+  <section class="section section-tight" aria-labelledby="closing-title">
+    <div class="wrap">
+      <div class="closing reveal">
+        <span class="eyebrow"><span class="idx">12</span>Next step</span>
+        <h2 class="h-display closing-title" id="closing-title">Built by Builders,<br>For Builders</h2>
+        <p class="closing-lead">Choose a direction today. We start the build the next working day and launch the store on 20 October.</p>
+        <div class="actions" role="group" aria-label="Choose a design direction">
+          <button type="button" class="btn btn-solid" data-set-theme="atelier" data-magnetic>01 Warm Atelier</button>
+          <button type="button" class="btn btn-line" data-set-theme="gallery" data-magnetic>02 Dark Gallery</button>
+          <button type="button" class="btn btn-line" data-set-theme="studio" data-magnetic>03 Studio Light</button>
+        </div>
+        <div class="contact-grid">
+          <div class="contact"><span class="mono">Website</span><a href="https://acutecircle.com" target="_blank" rel="noopener">acutecircle.com</a></div>
+          <div class="contact"><span class="mono">Email</span><a href="mailto:info.acutecircle@gmail.com">info.acutecircle@gmail.com</a></div>
+          <div class="contact"><span class="mono">Phone</span><a href="tel:+918791694160">+91 87916 94160</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="logo">Lumière<sup aria-hidden="true">*</sup></a>
+      <p>Concept website for a premium lighting brand, prepared by Acute Circle on 12 October 2026.</p>
+    </div>
+    <nav aria-label="Footer">
+      <p class="footer-h">The site</p>
+      <ul>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#view360">Product page</a></li>
+        <li><a href="#showroom">Showroom</a></li>
+        <li><a href="#quote">Request a quote</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Proposal">
+      <p class="footer-h">The proposal</p>
+      <ul>
+        <li><a href="#why">What we add</a></li>
+        <li><a href="#admin-intro">Admin dashboard</a></li>
+        <li><a href="#phases">Delivery phases</a></li>
+        <li><a href="#plan">Launch plan</a></li>
+      </ul>
+    </nav>
+    <div>
+      <p class="footer-h">Acute Circle</p>
+      <ul>
+        <li><a href="mailto:info.acutecircle@gmail.com">info.acutecircle@gmail.com</a></li>
+        <li><a href="tel:+918791694160">+91 87916 94160</a></li>
+        <li><a href="https://acutecircle.com" target="_blank" rel="noopener">acutecircle.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <span>Items marked <sup>*</sup> are assumptions or sample data.</span>
+    <span>© 2026 Acute Circle · Harshit Joshi, Techno-Functional and Solution Consultant</span>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="app.js"></script>
+<script src="hero3d.js"></script>
+
+</body>
+</html>

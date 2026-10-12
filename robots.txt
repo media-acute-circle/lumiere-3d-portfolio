@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://media-acute-circle.github.io/lumiere-3d-portfolio/sitemap.xml

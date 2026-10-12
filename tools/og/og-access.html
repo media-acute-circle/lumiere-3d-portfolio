@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OG · Lumière access</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body { position: relative; color: #F1F5F9; font-family: Inter, sans-serif;
+    background: radial-gradient(60% 70% at 12% 10%, rgba(0,212,184,.22), transparent 70%), radial-gradient(55% 70% at 95% 100%, rgba(124,58,237,.3), transparent 70%), radial-gradient(80% 80% at 50% 50%, #0F1822, #080C10 80%); }
+  .grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(148,163,184,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,.07) 1px, transparent 1px); background-size: 60px 60px;
+    -webkit-mask-image: radial-gradient(70% 80% at 70% 50%, #000, transparent 85%); }
+  .orbit { position: absolute; border-radius: 50%; border: 1.5px solid; }
+  .o1 { right: 40px; top: 35px; width: 560px; height: 560px; border-color: rgba(0,212,184,.45); transform: rotate(-12deg) scaleY(.92); }
+  .o2 { right: 0; top: -5px; width: 640px; height: 640px; border-color: rgba(124,58,237,.38); transform: rotate(18deg) scaleY(.85); }
+  .sat { position: absolute; width: 14px; height: 14px; border-radius: 50%; background: #00D4B8; box-shadow: 0 0 22px 6px rgba(0,212,184,.6); }
+  .pendant { position: absolute; right: 70px; top: 20px; width: 500px; height: 590px; object-fit: cover; object-position: center 30%;
+    -webkit-mask-image: radial-gradient(60% 65% at 50% 45%, #000 50%, transparent 100%); }
+  .copy { position: absolute; left: 72px; top: 60px; bottom: 56px; width: 600px; display: flex; flex-direction: column; }
+  .head { display: flex; align-items: center; gap: 16px; }
+  .head img { width: 76px; height: 76px; }
+  .head b { font-size: 26px; font-weight: 700; letter-spacing: -.01em; }
+  .head b span { color: #00D4B8; }
+  .pill { align-self: flex-start; margin-top: 46px; display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; border: 1px solid rgba(0,212,184,.35); border-radius: 999px; background: rgba(0,212,184,.08); color: #00D4B8; font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; }
+  .pill svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; }
+  h1 { margin-top: 20px; font-size: 60px; font-weight: 800; line-height: 1.04; letter-spacing: -.035em; }
+  h1 span { background: linear-gradient(120deg, #00D4B8, #7C3AED); -webkit-background-clip: text; color: transparent; }
+  p { margin-top: 18px; max-width: 520px; font-size: 21px; line-height: 1.5; color: #94A3B8; }
+  .tags { margin-top: auto; display: flex; flex-wrap: wrap; gap: 10px; }
+  .tags span { padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); font-size: 15px; font-weight: 600; color: #E2E8F0; }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="orbit o2"></div><div class="orbit o1"></div>
+  <span class="sat" style="right: 590px; top: 260px"></span>
+  <span class="sat" style="right: 60px; top: 470px; background:#7C3AED; box-shadow: 0 0 22px 6px rgba(124,58,237,.6)"></span>
+  <img class="pendant" src="pendant.png" alt="">
+  <div class="copy">
+    <div class="head"><img src="../../assets/brand/acute-circle-emblem.png" alt=""><b>Acute<span>.</span>Circle</b></div>
+    <span class="pill"><svg viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>Private preview</span>
+    <h1>Lumière <span>3D Portfolio</span></h1>
+    <p>An immersive WebGL product experience for a premium lighting brand. Built with Aurum AI.</p>
+    <div class="tags"><span>WebGL 3D</span><span>360° viewer</span><span>Quote-led catalogue</span><span>Admin dashboard</span></div>
+  </div>
+</body>
+</html>
