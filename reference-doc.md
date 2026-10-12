@@ -4,6 +4,9 @@
 Acute Circle · **Date** 2026-10-12 · **Target launch** 2026-10-20 (store
 opening day)
 
+> **Revised 2026-10-12:** launch scope is now **5 to 7 products** (was 10
+> to 15), and the free ACM hours cover maintenance only (§5).
+>
 > This proposal is the source of truth for *what* we build. The concept site
 > in this repository (`index.html`) visualises it; where the two disagree,
 > this document wins.
@@ -149,10 +152,19 @@ mailbox.
 
 ## 5. Support after launch
 
-You get **two months of free ACM support after the MVP — 60 hours in
-total**. We use these hours for changes the team cannot make from the
-dashboard, such as new pages, new features or a fix. Simple edits stay with
-your team.
+You get **two months of free ACM support after the MVP: 60 hours in
+total.** These hours cover maintenance of the launched site only.
+
+| Included in the 60 hours | Billed separately |
+|---|---|
+| Site health checkups | New pages |
+| Security patches and updates | New features |
+| Content changes | New change requests |
+| Text tweaks | |
+
+> ⚠️ **New pages, new features and new change requests are not part of the
+> free hours.** We quote and bill them separately. Everyday edits such as a
+> price or a description stay with your team in the dashboard (§4).
 
 ---
 
@@ -164,7 +176,7 @@ your team.
 understand it, and ask for a quote.
 
 - Nine public pages from §3, plus the admin dashboard.
-- 10 to 15 products with photos, specifications and a quote button.
+- 5 to 7 products with photos, specifications and a quote button.
 - Zoom and 360° photos for every product; a 3D viewer only where a model
   exists.
 - A quote form that sends each enquiry to your team by email, with a
@@ -212,7 +224,7 @@ Phase 2 is running.
 
 | Date | What happens | Who |
 |---|---|---|
-| 13 Oct | Choose 10 to 15 pieces for launch | Client and Acute Circle |
+| 13 Oct | Choose 5 to 7 pieces for launch | Client and Acute Circle |
 | 14 Oct | Product photos and specifications received | Client |
 | 15–17 Oct | Build pages, product templates, quote form and WhatsApp link | Acute Circle |
 | 18 Oct | Client reviews the site and sends corrections | Client |
@@ -227,7 +239,7 @@ Phase 2 is running.
 
 ## 8. What we need from you
 
-1. **Launch pieces.** The 10 to 15 pieces you most want online first, with
+1. **Launch pieces.** The 5 to 7 pieces you most want online first, with
    their names and codes.
 2. **Media.** Photos of each piece, and any existing 3D files or CAD
    drawings.

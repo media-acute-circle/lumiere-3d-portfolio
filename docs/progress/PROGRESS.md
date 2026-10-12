@@ -38,6 +38,25 @@
 
 ## Session log
 
+### 2026-10-12 (scope update)
+
+- **Client decision (2026-10-12):** launch scope cut to **5 to 7 products**
+  (was 10 to 15). Updated in `portfolio.html` (MVP phase, plan to
+  20 October, client checklist, trust stat now 7) and in `reference-doc.md`
+  (§6, §7, §8), with a revision note at the top of the proposal.
+- **Free ACM support clarified:** the 60 hours cover maintenance only (site
+  health checkups, security patches, content changes, text tweaks). New
+  pages, new features and new change requests are billed separately. Added a
+  highlighted *Support after launch* panel to the dashboard section;
+  corrected the Support card, which had said the hours covered new pages;
+  rewrote proposal §5 as an included / billed table.
+- QA:
+  - no "10 to 15" left anywhere
+  - responsive sweep 24/24 OK
+  - portfolio and hero interactions pass, no errors
+  - gate flow passes in Chromium, WebKit and Firefox over HTTP and `file://`
+  - support panel checked in all three directions at 1440 px and at 375 px
+
 ### 2026-10-12 (fix)
 
 - The user reported a dead access screen. Root cause: `gate.js` had been

@@ -817,6 +817,28 @@ body[data-theme="gallery"] .hero-word { color: transparent; -webkit-text-stroke:
 .card-sm h3, .card-sm p { margin: 0; }
 .card-sm p { font-size: var(--fs-sm); line-height: 1.6; }
 
+/* Support after launch: highlighted scope of the free ACM hours */
+.support-note {
+  position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: var(--s6); align-items: start;
+  margin-top: var(--s6); padding: var(--card-pad);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 10%, var(--surface)), var(--surface) 60%);
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--line)); border-radius: var(--radius); box-shadow: var(--shadow-md);
+}
+.support-note::before { content: ""; position: absolute; left: -1px; top: var(--card-pad); bottom: var(--card-pad); width: 3px; border-radius: 0 3px 3px 0; background: var(--accent); }
+.support-head { display: grid; gap: var(--s3); }
+.support-head > * { margin: 0; }
+.support-head p { color: var(--muted); font-size: var(--fs-sm); line-height: 1.6; max-width: 40ch; }
+.support-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s4); }
+.support-col { padding: var(--s4) var(--s5); background: var(--bg); border: 1px solid var(--line); border-radius: var(--r-inner); }
+.support-label { margin-bottom: var(--s3); font-family: var(--mono); font-size: var(--fs-xs); font-weight: 500; letter-spacing: .08em; text-transform: uppercase; }
+.is-in .support-label { color: var(--accent); }
+.is-out .support-label { color: var(--muted); }
+.support-col ul { display: grid; gap: var(--s2); margin: 0; padding: 0; list-style: none; font-size: var(--fs-sm); line-height: 1.5; }
+.support-col li { display: flex; align-items: baseline; gap: var(--s2); }
+.is-in li::before { content: "✓" / ""; flex: none; color: var(--accent); font-weight: 700; }
+.is-out li::before { content: "+" / ""; flex: none; color: var(--muted); font-weight: 700; }
+.is-out li { color: var(--muted); }
+
 /* 17 Delivery phases and launch plan -------------------------------------- */
 .timeline { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); }
 .timeline > div { position: relative; padding: var(--card-pad); background: var(--surface); }
@@ -912,6 +934,7 @@ body[data-theme="gallery"] .hero-word { color: transparent; -webkit-text-stroke:
   .kanban { grid-template-columns: 1fr; }
   .col { min-height: 0; }
   .card-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .support-note { grid-template-columns: minmax(0, 1fr); gap: var(--s5); }
   .ring { scale: .85; }
   .ring-stage { height: 440px; }
 }
@@ -1002,6 +1025,7 @@ body[data-theme="gallery"] .hero-word { color: transparent; -webkit-text-stroke:
   .field-pair { grid-template-columns: 1fr; }
   .page-row { align-items: flex-start; }
   .card-row { grid-template-columns: 1fr; }
+  .support-cols { grid-template-columns: minmax(0, 1fr); }
 
   .timeline > div { padding: var(--s5) var(--s4); }
   .plan-list li { grid-template-columns: 1fr; }
