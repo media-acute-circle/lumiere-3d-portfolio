@@ -6,7 +6,7 @@
 <script>
   /* Skip the gate for a visitor who already unlocked this session */
   (function () {
-    var h = '31d7e1681777aa28a58007dc7c351b241ce0f02dc31eefb81bb0d972046c1b84', ok = false;
+    var h = '95bfd8948e678a2a642f448e2ce2220d842573f88c54e3edcded6f66a20bf5c4', ok = false;
     try { ok = sessionStorage.getItem('lumiere-access') === h; } catch (e) {}
     if (ok || window.name === 'lumiere-access:' + h) location.replace('portfolio.html');
   })();
@@ -147,7 +147,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="gate.js?v=3"></script>
+<script src="gate.js?v=4"></script>
 <script>
   /* If gate.js failed to load, say so instead of leaving a dead form */
   addEventListener('load', function () {

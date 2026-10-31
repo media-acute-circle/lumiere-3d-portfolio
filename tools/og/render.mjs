@@ -10,7 +10,7 @@ import path from 'node:path';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '../..');
-const HASH = '31d7e1681777aa28a58007dc7c351b241ce0f02dc31eefb81bb0d972046c1b84';
+const HASH = '95bfd8948e678a2a642f448e2ce2220d842573f88c54e3edcded6f66a20bf5c4';
 const browser = await chromium.launch(process.env.CHROME ? { executablePath: process.env.CHROME } : {});
 
 // 1. Capture the pendant
