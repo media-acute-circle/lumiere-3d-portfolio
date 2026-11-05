@@ -6,7 +6,7 @@
 <script>
   /* Private preview: send visitors without an unlocked session to the access screen */
   (function () {
-    var h = '95bfd8948e678a2a642f448e2ce2220d842573f88c54e3edcded6f66a20bf5c4', ok = false;
+    var h = '84f13f4e0a59c791e01b994180990ce8f8e57fcd143b5603952b2bfa80b628a8', ok = false;
     try { ok = sessionStorage.getItem('lumiere-access') === h; } catch (e) {}
     if (!ok && window.name !== 'lumiere-access:' + h) location.replace('index.html');
   })();

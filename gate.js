@@ -8,7 +8,7 @@
    visitors out; it is not access control. See docs/project/site-guide.md §6.
    ========================================================================== */
 (() => {
-  const ACCESS_HASH = '95bfd8948e678a2a642f448e2ce2220d842573f88c54e3edcded6f66a20bf5c4';
+  const ACCESS_HASH = '84f13f4e0a59c791e01b994180990ce8f8e57fcd143b5603952b2bfa80b628a8';
   const KEY = 'lumiere-access', ATTEMPTS_KEY = 'lumiere-attempts', MAX_ATTEMPTS = 3;
   const NEXT = 'portfolio.html';
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
